@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: silver;
+}
+
+.reloj{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+    border: 1rem solid rgba(255, 0, 0, 0.329);/*borde del reloj*/
+    border-radius: 50vh;/*hacer el reloj redondo*/
+    box-shadow: inset 0px 0px 20px 10px rgba(255, 124, 124, 0.267);
+}
+/*crear sub-elementos internos a un elemento contenedor*/
+.reloj::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50vh;
+    z-index: 10000;/*ubicar los elementos debajo del boton*/
+
+}
+
+.hora{
+    width: 150px;
+    height: 150px;
+}
+.hora::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background-color: rgb(251, 255, 0);
+    border-radius: 50vh;
+    z-index: 10;/*ubicar los elementos debajo del boton*/
+
+}
+
+.minuto{
+    width: 190px;
+    height: 190px;
+}
+.minuto::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    background-color: rgb(73, 255, 1);
+    border-radius: 50vh;
+    z-index: 11;/*ubicar los elementos debajo del boton*/
+
+}
+
+.segundo{
+    width: 250px;
+    height: 250px;
+}
+.segundo::before{
+    content: '';
+    position: absolute;
+    width: 1.5px;
+    height: 150px;
+    background-color: rgb(19, 19, 19);
+    border-radius: 50vh;
+    z-index: 12;/*ubicar los elementos debajo del boton*/
+}
+
+.hora, .minuto, .segundo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+}
+
