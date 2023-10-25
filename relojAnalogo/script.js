@@ -17,23 +17,4 @@ setInterval(() => {
 
 })
 
-function reloj(){
-    let tiempoGlobal = new Date();
-
-    let hora = tiempoGlobal.getHours();
-    let minutos = tiempoGlobal.getMinutes();
-    let segundos = tiempoGlobal.getSeconds();
-    let formato = hora >= 12 ? 'PM' : 'AM';
-
-    hora = (hora % 12) || 12; // el residuo sera la hora en formato de 12 si es 0 significa que son las 12:00
-
-    hora = hora < 10 ? '0' + hora : hora;
-    minutos = minutos <10 ? '0' + minutos : minutos;
-    segundos = segundos < 10 ? '0' + segundos : segundos;
-
-    let resultado = `${hora} : ${minutos} : ${segundos} ${formato}`;
-    let relojHtml = document.querySelector('.reloj-digital');
-    relojHtml.innerHTML = resultado;
-}
-
 setInterval(reloj,1000)

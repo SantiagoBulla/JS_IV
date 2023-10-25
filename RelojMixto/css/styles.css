@@ -65,6 +65,7 @@ body{
     z-index: 11;/*ubicar los elementos debajo del boton*/
 
 }
+
 .segundo{
     width: 250px;
     height: 250px;
@@ -84,4 +85,21 @@ body{
     justify-content: center;
     position: absolute;
     border-radius: 50vh;
+}
+
+.reloj-digital{
+    border: 0.1rem solid white;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8rem;
+    margin-bottom: 4rem;
+    border-radius: 50vh;
+    padding: .3rem;
+    font-family: monospace;
+    font-size: .6rem;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.329);
 }
