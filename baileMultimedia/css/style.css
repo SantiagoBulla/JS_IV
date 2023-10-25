@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.esqueletoOff{
+    width: 550px;
+    height: 600px;
+    background-color:#25D7FF;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-image: url('../img/esqueleto2.png');
+}
+
+.esqueletoOff.on{/*es una clase agregada que hereda de esqueletoOff*/
+    background-image: url('../img/esqueleto1.gif');
+}
+
+.esqueletoOnOff{
+    width: 100px;
+    height: 50px;
+    background-color: #157085;
+    border-radius: 1vh;
+    border: 0.2rem solid #0c363f;
+    position: fixed;
+    color: rgb(245, 239, 239);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    margin-bottom: .8rem;
+    cursor: pointer;
+}
+
+.esqueletoOnOff:hover{
+    background-color: rgb(255, 68, 0);
+    border: 0.2rem solid rgb(255, 255, 63);
+}
