@@ -1,0 +1,25 @@
+body{
+    background-color: #ADD8E6;
+}
+
+.puntaje{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    background-color: #5F9EA0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    /*se aplica una mascara para que el contenedor div tome la forma del svg*/
+    -webkit-mask-image: url(../img/star.svg);
+    mask-image: url(../img/star.svg);
+
+}
+
+.item.select{/*clase temporal*/
+    background-color: #4682B4 ;
+}
