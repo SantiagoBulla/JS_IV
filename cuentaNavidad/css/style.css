@@ -111,6 +111,9 @@
 }
 .play-on.off, .pause-on.off{
     pointer-events: auto;
+    background-color: white;
+    border: 1px solid beige;
+    color: #03738C;
 }
 .play-on.off:hover, .pause-on.off:hover{
     background-color: #F23E2E;
