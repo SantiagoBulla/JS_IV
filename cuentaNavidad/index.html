@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuenta regresiva navidad</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="container-body">
+            <div class="titulo">
+                <h1 id="enunciado"></h1>
+            </div>
+            <div id="cuentaRegresivas">
+                <div class="valor">
+                    <div id="dias">00</div>
+                    <p>D</p>
+                </div>
+                <div class="valor">
+                    <div id="horas">00</div>
+                    <p>H</p>
+                </div>
+                <div class="valor">
+                    <div id="minutos">00</div>
+                    <p>M</p>
+                </div>
+                <div class="valor">
+                    <div id="segundos">00</div>
+                    <p>S</p>
+                </div>
+            </div>
+            <div class="botones">
+                <button class="play-on" id="btnPlay" onclick="play()">Play</button>
+                <button class="pause-on" id="btnPause" onclick="pause()">Pause</button>
+            </div>
+        </div>
+            <div class="div-img">
+                <div class="papaNoel" id="papaNoelBaila">
+            </div> 
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+
+/* Color Theme Swatches in Hex */
+.The-Grinch---Life-Is-Good-1-hex { color: #A0C9D9; }
+.The-Grinch---Life-Is-Good-2-hex { color: #03738C; }
+.The-Grinch---Life-Is-Good-3-hex { color: #B2BF50; }
+.The-Grinch---Life-Is-Good-4-hex { color: #9BA649; }
+.The-Grinch---Life-Is-Good-5-hex { color: #F23E2E; }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(83, 200, 220);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-body{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container-body .titulo{
+    color: #F23E2E;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+#cuentaRegresivas{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#cuentaRegresivas .valor{
+    color: #FFFF;
+    text-align: center;
+}
+
+.valor p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#dias,#horas, #minutos,#segundos{
+    width: 8rem;
+    height: 5rem;
+    margin-top: 1rem;
+    border: 1px solid yellow;
+    font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5rem;
+}
+
+.botones{
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botones button{
+    border: 0;
+    padding: .8rem;
+    color: #FFFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 8rem;
+    background-color: #B2BF50;
+    border-radius: 3rem;
+    border: 1px solid #9BA649;
+    cursor: pointer;
+}
+
+
+.div-img{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.papaNoel{
+    width: 650px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/papaNoel___35654be3ba224a5___.png');
+}
+
+.papaNoel.on{
+    background-image: url('../img/papaNoel___61654be3b908afe___.gif');
+}
+
+.play-on, .pause-on{
+    pointer-events: none;
+}
+.play-on.off, .pause-on.off{
+    pointer-events: auto;
+}
+.play-on.off:hover, .pause-on.off:hover{
+    background-color: #F23E2E;
+    border: 1px solid white;
+    color: white;
+}
