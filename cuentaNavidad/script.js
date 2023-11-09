@@ -1,4 +1,4 @@
-let btnPlayMusic = new Audio('C:/Users/Public/Documents/JS_IV/cuentaNavidad/audio.mp3');
+let btnPlayMusic = new Audio('./audio/Music.mp3');
 function obtenerTiempoFaltante(fechaLimite) {
     let ahora = new Date();
     let tiempoFaltante = (new Date(fechaLimite) - ahora + 1000) / 1000
@@ -45,14 +45,15 @@ function cuentaRegresiva(tiempoFaltante, reloj, mensaje) {
             btn.classList.add('off');
             const btn2 = document.getElementById("btnPause");
             btn2.classList.add('off');
-            btnPlayMusic.play();
+            let divPapaNoel = document.getElementById('papaNoelBaila');
+            divPapaNoel.classList.add('on');
         }
 
     }, 1000);
 
 };
 
-cuentaRegresiva('Nov 8 2023 12:36:00','cuentaRegresiva','Feliz navidad');
+cuentaRegresiva('Nov 9 2023 8:03:00','cuentaRegresiva','¡Feliz Navidad!');
 
 function play(){
     let divPapaNoel = document.getElementById('papaNoelBaila');
@@ -61,7 +62,5 @@ function play(){
 }
 
 function pause(){
-    let divPapaNoel = document.getElementById('papaNoelBaila');
-    divPapaNoel.classList.remove('on');
     btnPlayMusic.pause();
 }
