@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.logo{
+    max-width: 12rem;
+    margin-left: 5px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #F2F2F2;
+}
+
+.listaMenu{
+    list-style-type: none;/*quitar puntos de lista*/
+    display: flex;
+    gap: 1.5rem;
+}
+.listaMenu li a {
+    text-decoration: none;
+    color: #6D0FF2;
+    font-size: 20px;
+    margin-right: 12px;
+}
+.abrirMenu, .cerrarMenu{
+    display: none;
+}
+
+@media screen and (max-width:730px) {/*version mobil*/
+    .abrirMenu, .cerrarMenu{
+        display: block;
+        border: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: #6D0FF2;
+    }
+    .cerrarMenu{
+        background-color: transparent;
+        color: #f2f2f2c9;
+    }
+    .menuPrincipal{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #6D0FF2;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax #f2f2f2c9;/*vmax unidad relativa {sombra}*/
+    }
+    .menuPrincipal.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .listaMenu{
+        flex-direction: column;
+        align-items: end;
+    }
+    .listaMenu li a{
+        color: #F2F2F2;
+    }
+}
