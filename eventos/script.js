@@ -56,34 +56,44 @@ function diferenciaFecha(destino) {
 }
 
 function mostrarEventos() {
-    const eventosHTML = eventos.map((evento) => {//recorre el arreglo para mostrar los eventos
-        return `
-        <div class="evento">
-            <div class="dias">
-                <span class="diasFaltantes">${diferenciaFecha(evento.fecha)}</span>
-                <span class="texto">dias para</span>
+    if (eventos.length > 0) {
+        const eventosHTML = eventos.map((evento) => {//recorre el arreglo para mostrar los eventos
+            return `
+            <div class="evento">
+                <div class="dias">
+                    <span class="diasFaltantes">${diferenciaFecha(evento.fecha)}</span>
+                    <span class="texto">dias para</span>
+                </div>
+    
+                <div class="nombreEvento">${evento.nombre}</div>
+                <div class="fechaEvento">${evento.fecha}</div>
+    
+                <div class="acciones">
+                    <button data-id="${evento.id}" class="eliminar">Eliminar</button>
+                </div>
             </div>
-
-            <div class="nombreEvento">${evento.nombre}</div>
-            <div class="fechaEvento">${evento.fecha}</div>
-
-            <div class="acciones">
-                <button data-id="${evento.id}" class="eliminar">Eliminar</button>
-            </div>
-        </div>
-        `
-    });
-    listaEventos.innerHTML = eventosHTML.join('');
-    document.querySelectorAll('.eliminar').forEach(button => {//recorre todos los boton
-        button.addEventListener('click', e => {
-            const id = button.getAttribute('data-id');//escuche su propio id
-            eventos = eventos.filter(evento => evento.id !== id);//deje todos los demas eventos idiferente del id que se dio click en el boton
-
-            guardar(JSON.stringify(eventos));//actualizar el localstorage con los eventos que quedaron
-
-            mostrarEventos();//mostrar los que quedaron
+            `
         });
-    });
+        listaEventos.innerHTML = eventosHTML.join('');
+        document.querySelectorAll('.eliminar').forEach(button => {//recorre todos los boton
+            button.addEventListener('click', e => {
+                const id = button.getAttribute('data-id');//escuche su propio id
+                eventos = eventos.filter(evento => evento.id !== id);//deje todos los demas eventos idiferente del id que se dio click en el boton
+    
+                guardar(JSON.stringify(eventos));//actualizar el localstorage con los eventos que quedaron
+    
+                mostrarEventos();//mostrar los que quedaron
+            });
+        });
+    } else {
+        listaEventos.innerHTML = `
+        <div class="emptyList">
+            <h2>NO TIENES EVENTOS PENDIENTES</h2>
+            <img src="./img/triste.png" alt="noEvents">
+        </div>
+        `;
+    }
+    
 }
 
 function guardar(datos) {

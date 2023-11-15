@@ -79,7 +79,6 @@ form input:focus{
 
 /*lista de eventos*/
 .contenedor-eventos{
-    border: 1px solid red;
     height: 60%;
     padding-top: 10px;
     display: flex;
@@ -88,28 +87,100 @@ form input:focus{
 }
 
 .listaEventos2{
-    width: 60%;
+    width: 50%;
     height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #eef9ff;
     border-radius: 1.5rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .evento{
-    border: 1px solid green;
+    border: 2px solid #8edcff;
+    border-radius: .5rem;
     width: 95%;
-    height: 6rem;
+    height: 6rem; 
     margin: 15px 0;
-    padding: 0 6px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.evento .nombreEvento{
-    width: 25%;
-    overflow-x: scroll;
+.dias{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dias .diasFaltantes{
+    font-size: 2rem;
+    font-weight: bold;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    color: #36ae62;
+}
+
+.dias .texto{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.evento .nombreEvento {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow-x: auto; /* Agrega una barra de desplazamiento solo cuando el contenido se desborda */
+}
+
+.evento .fechaEvento{
+    font-size: large;
+    font-weight: 500;
+}
+
+.acciones{
+    height: 45%;
+    width: 12%;
+}
+
+.acciones button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    background-color: #83e440;
+    color: #0d452c;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.acciones button:hover{
+    background-color: #e73c3b;
+    color: #eef9ff;
+}
+
+/*cuando no hay eventos*/
+.emptyList{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1c2943;
+}
+
+.emptyList img{
+    height: 80px;
+    width: 150px;
 }
