@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.eventos{
+    background-color: #00abfe;
+    width: 100w;
+    height: 100vh;
+}
+
+/*formulario*/
+.formulario{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-header{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.form-header img{
+    height: 50px;
+    width: 50px;
+}
+
+.formulario h3{
+    margin-top: 5px;
+    color: white;
+    font-size: 2rem;
+}
+
+form{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    border-radius: 2rem;
+    background-color: #eef9ff;
+}
+
+form input{
+    width: 80%;
+    height: 2.5rem;
+    border: 2px solid #97d9ec;
+    border-radius: .5rem;
+    padding-left: 5px;
+    font-size: medium;
+    color: #1c2943;
+    ;
+}
+
+#agregar{
+    border: 2px solid #00abfe;
+    background-color: #00abfe;
+    border-radius: 1rem;
+    height: 3rem;
+    color: #eef9ff;
+    font-size: medium;
+}
+
+form input::placeholder{
+    padding-left: 3px;
+}
+form input:focus{
+    border: 1px solid #97d9ec;
+    border-radius: .5rem;
+}
+
+/*lista de eventos*/
+.contenedor-eventos{
+    border: 1px solid red;
+    height: 60%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listaEventos2{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eef9ff;
+    border-radius: 1.5rem;
+    overflow-y: scroll;
+}
+
+.evento{
+    border: 1px solid green;
+    width: 95%;
+    height: 6rem;
+    margin: 15px 0;
+    padding: 0 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.evento .nombreEvento{
+    width: 25%;
+    overflow-x: scroll;
+}
